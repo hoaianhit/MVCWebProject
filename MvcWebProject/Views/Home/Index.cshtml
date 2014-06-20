@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm()) { 
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>AAA</legend>
+        <div class="editor-label">
+            @Html.Label("Name")
+            <i class="fa fa-car"></i> fa-car
+        </div>
+        <div class="editor-field">
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </div>
+    </fieldset>
+}
+
+@section chatbar{
+    <p>This chatbar has "Home Page" specific content</p>
+    @RenderPage("~/Views/Shared/_AdminChat.cshtml")
+}
